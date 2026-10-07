@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Travel Buddy</title>
+    <link rel="icon" type="image/x-icon" href="images/fav%20icon%20travel%20image.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="dashboard.html" class="logo">✈️ TravelBuddy Admin</a>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+</header>
+
+
+<main class="dashboard">
+    <span class="eyebrow">
+        ADMIN PANEL
+    </span>
+    <h1>
+        Manage Trips
+    </h1>
+    <div id="adminTrips" class="trip-grid"></div>
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

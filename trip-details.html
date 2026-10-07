@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details</title>
+    <link rel="icon" type="image/x-icon" href="images/fav%20icon%20travel%20image.jpg">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="dashboard.html" class="logo">
+        ✈️ TravelBuddy
+    </a>
+
+    <nav>
+
+        <a href="dashboard.html">
+            ← My Trips
+        </a>
+
+        <a id="editTripBtn" href="#" class="nav-button">
+            Edit Trip
+        </a>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="trip-details-page">
+
+    <section class="trip-hero">
+
+        <img id="tripImage" src="" alt="Trip">
+
+        <div class="trip-hero-content">
+
+            <span id="destination"></span>
+
+            <h1 id="tripName"></h1>
+
+            <p id="description"></p>
+
+            <div class="hero-meta">
+
+                <span id="dates"></span>
+
+                <span id="budget"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="details-grid">
+
+        <!-- PLACES -->
+
+        <div class="detail-section">
+
+            <div class="section-title">
+
+                <h2>
+                    📍 Places
+                </h2>
+
+            </div>
+
+            <form id="placeForm">
+
+                <input id="placeName" placeholder="Place name" required>
+
+                <input id="placeDescription" placeholder="Description">
+
+                <input id="placeImage" type="url" placeholder="Image URL (https://...)">
+
+                <button class="btn" type="submit">
+                    Add Place
+                </button>
+
+            </form>
+
+            <div id="placesList"></div>
+
+        </div>
+
+
+        <!-- ACTIVITIES -->
+
+        <div class="detail-section">
+
+            <h2>
+                🎯 Activities
+            </h2>
+
+            <form id="activityForm">
+
+                <input id="activityName" placeholder="Activity name" required>
+
+                <input type="date" id="activityDate">
+
+                <input id="activityDescription" placeholder="Description">
+
+                <input type="number" id="activityCost" min="0" placeholder="Cost">
+
+                <button class="btn" type="submit">
+                    Add Activity
+                </button>
+
+            </form>
+
+            <div id="activitiesList"></div>
+
+        </div>
+
+
+        <!-- EXPENSES -->
+
+        <div class="detail-section">
+
+            <h2>
+                💰 Expenses
+            </h2>
+
+            <form id="expenseForm">
+
+                <input id="expenseTitle" placeholder="Expense title" required>
+
+                <input id="expenseCategory" placeholder="Category">
+
+                <input type="number" id="expenseAmount" min="0" placeholder="Amount" required>
+
+                <input type="date" id="expenseDate">
+
+                <button class="btn" type="submit">
+                    Add Expense
+                </button>
+
+            </form>
+
+            <div id="expensesList"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/trip.js"></script>
+
+</body>
+
+</html>

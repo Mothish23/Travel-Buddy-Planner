@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - Travel Buddy</title>
+    <link rel="icon" type="image/x-icon" href="images/fav%20icon%20travel%20image.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="dashboard.html" class="logo">✈️ TravelBuddy</a>
+
+    <nav>
+
+        <span>
+            Hi, <strong id="welcomeName"></strong>
+        </span>
+
+        <a href="create-trip.html" class="nav-button">+ Create Trip</a>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <div class="dashboard-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR ADVENTURES
+            </span>
+
+            <h1>
+                My Trips
+            </h1>
+
+            <p>
+                Manage all your upcoming adventures.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="tripContainer" class="trip-grid"></div>
+
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

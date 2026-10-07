@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Trip - Travel Buddy</title>
+    <link rel="icon" type="image/x-icon" href="images/fav%20icon%20travel%20image.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="navbar">
+    <a href="dashboard.html" class="logo">✈️ TravelBuddy</a>
+
+    <nav>
+        <a href="dashboard.html">← My Trips</a>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+    </nav>
+
+</header>
+<main class="form-page">
+    <div class="form-card">
+        <span class="eyebrow">
+            UPDATE ADVENTURE
+        </span>
+
+        <h1>
+            Edit Your Trip
+        </h1>
+
+        <p>
+            Update the details of your adventure.
+        </p>
+
+        <form id="editTripForm">
+            <label>
+                Trip Name
+            </label>
+
+            <input id="tripName" required placeholder="Kerala Adventure">
+
+            <label>
+                Destination
+            </label>
+
+            <input id="destination" required placeholder="Munnar, Kerala">
+
+            <div class="form-row">
+                <div>
+                    <label>
+                        Start Date
+                    </label>
+
+                    <input type="date" id="startDate" required>
+                </div>
+
+                <div>
+                    <label>
+                        End Date
+                    </label>
+                    <input type="date" id="endDate" required>
+                </div>
+
+            </div>
+
+            <label>
+                Budget
+            </label>
+
+            <input type="number" id="budget" min="0" required placeholder="15000">
+
+            <label>
+                Image URL
+            </label>
+
+            <input id="imageUrl" type="url" placeholder="https://...">
+
+            <label>
+                Description
+            </label>
+
+            <textarea id="description" rows="5" placeholder="Describe your trip..."></textarea>
+
+            <div class="card-actions">
+
+                <a href="dashboard.html" class="btn secondary">
+                    Cancel
+                </a>
+
+                <button class="btn" type="submit">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+        <p id="message" class="error-message"></p>
+
+    </div>
+
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/edit-trip.js"></script>
+
+</body>
+
+</html>
